@@ -1,0 +1,131 @@
+/* input color variables */
+:root {
+    --dark: #38003d;
+    --light: #ffffff;
+    --secondary: #d9d9d9;
+    --primary: #999999;
+}
+/* universal style */
+body {
+    font-family: 'Ubuntu', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../images/background-image.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    color: var(--light);
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}  
+
+/* nav bar style start */
+
+.top-bar {
+    background-color: var(--dark);
+    color: var(--light);
+    text-align: center;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+#title {
+    color: var(--light);
+}
+
+/* nav bar style end */
+
+
+/* select form style start*/
+
+#team-select {
+    width: 50%;
+    height: 2rem;
+}
+
+#team-select:hover {
+    background-color: #dddbdb;
+}
+
+#team-select-btn {
+    background-color: var(--dark);
+    color: var(--light);
+    height: 2rem;
+    width: 30%;
+    cursor: pointer;
+    border: 0.5px solid;
+    outline: none;
+    border-radius: 8px;
+}
+
+#team-select-btn:hover {
+    background-color: var(--light);
+    color: var(--dark);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.form-group {
+    margin: 1rem 0;
+}
+/* select form style end */
+
+/* modal style start */
+
+.modal-content {
+    color: black;
+}
+
+/*modal style end */
+
+
+/* footer style start */
+
+footer {
+    width: 100%;
+    background-color: var(--dark);
+    color: var(--light);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+footer a,
+.portfolio-link {
+    text-decoration: none;
+    color: var(--light);
+    padding: 1rem 0;
+}
+
+footer a:hover,
+.portfolio-link:hover {
+    color: var(--secondary);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.portfolio-link {
+    font-size: 1rem;
+}
+
+/* footer end */
+
+/* modal popup display */
+#open-button {
+    display: none;
+}
+
+@media screen and (max-width:640px) {
+    #team-select {
+        width: 100%;
+    }
+
+    #team-select-btn {
+        width: 100%;
+    }
+    
+}
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+        integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <!--foundation css framework cdn-->
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main-display.css">
+    <title>football-hub-main-display</title>
+</head>
+
+<body>
+
+    <div class="top-bar align-center-middle">
+        <div class="title">
+            <h2 class="align-center-middle">football factory.            
+            </h2>
+            <a class="align-right back-link"><i class="fas fa-long-arrow-alt-left"></i></i> back to team select.</a>
+        </div>
+
+
+    </div>
+
+    <!-- set color theme to users favourite teams colors-->
+
+    <!-- display users favourites teams last 3 games -->
+
+    <!-- get team from local storage and display in a h3 above a list-->
+    <div class="grid-x align-center-middle" id="pagewrapper">
+
+        <div class="grid-x align-center-middle text-center" id="game-container">
+            <table class="cell small-12 highlights-table-head">
+                <thead>
+                    <tr>
+                        <th width="100%" class="th-highlights">recent games. click a game to view the highlights.</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+        <div class="grid-x align-centre-middle fixtures-container">
+            <table class="fixtures-table-head">
+                <h5 id="upcoming-games">upcoming games.</h3>
+                    <thead>
+                        <tr>
+                            <th width="30%" class="th-home">home.</th>
+                            <th width="10"></th>
+                            <th width="30%" class="th-away">away.</th>
+                        </tr>
+                    </thead>
+            </table>
+        </div>
+
+        <div class="league-table-container">
+            <table class="league-table">
+                <h5 id="league-table-id">league table.</h3>
+                    <thead>
+                        <tr>
+                            <th width="5%" class="posCol">Pos.</th>
+                            <th width="5%" class="iconCol"></th>
+                            <th width="50%"></th>
+                            <th width="5%" class="gamesPlayedCol">Played.</th>
+                            <th width="5%" class="goalDifCol">Goal Diff.</th>
+                            <th width="5%">Points.</th>
+                        </tr>
+                    </thead>
+            </table>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer id="footer">
+        <div class="grid-x align-center-middle text-center">
+            <div class="cell small-12 medium-4 align-self-middle">
+                <a href="https://patricktheodore.github.io/patricktheodore-portfolio/" target="_blank"
+                    class="portfolio-link">patricktheodore.</a>
+            </div>
+            <div class="cell small-12 medium-4 align-self-middle">
+                <a class="fab fa-github fa-2x" title="github"
+                    href="https://github.com/patricktheodore/football-highlights-dashboard/" target="_blank"></a>
+            </div>
+            <div class="cell small-12 medium-4 align-self-middle">
+                <a href="https://raw.githack.com/ThiHoangPham/Coursework2.Adam/master/index.html" target="_blank"
+                    class="portfolio-link">ThiHoangPham</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!--jQuery cdn-->
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
+        integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+    <!--foundation css framework js cdn-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!--moment script link-->
+    <script src="../js/main-display.js"></script>
+</body>
+
+</html>

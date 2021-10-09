@@ -1,0 +1,271 @@
+:root {
+    --dark: #38003d;
+    --light: #ffffff;
+    --secondary: #d9d9d9;
+    --primary: #999999;
+}
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* nav bar style start */
+
+.top-bar {
+    background-color: var(--dark);
+    color: var(--light);
+    text-align: center;
+    width: 100%;
+    padding: 1rem 0;
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    color: var(--light);
+}
+
+.back-link {
+    color: var(--light);
+    font-size: 1.2rem;
+}
+
+.back-link:hover {
+    color: var(--secondary);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.fa-long-arrow-alt-left {
+    margin-right: 0.2rem;
+}
+
+/* nav bar style end */
+
+
+/* video container section start*/
+
+#video-reveal-button {
+    background-color: var(--light);
+    color: black;
+    height: 2rem;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    font-size: 1.5rem;
+}
+
+#video-reveal-button:hover {
+    background-color: var(--secondary);
+    color: var(--dark);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.game-title {
+    width: 60%;
+    text-align: center;
+}
+
+.fa-caret-down {
+    margin-left: 1rem;
+}
+
+.highlights-date, 
+.highlights-competition {
+    font-size: 0.8rem;
+}
+
+#game-container {
+    width: 60%;
+}
+
+.highlights-table-head {
+    width: 100%;
+}
+
+.video-link-div {
+    margin: 0.5rem 0;
+    width: 60%;
+}
+
+/* video container section end*/
+
+#upcoming-games,
+#league-table-id {
+    text-align: center;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+td {
+    padding: 0.5rem 0;
+}
+
+.team-crest-img {
+    height: 1.5rem;
+    width: 1.5rem;
+    text-align: center;
+    margin: 0 0.5rem;
+}
+
+.wins {
+    background-color: rgb(28, 192, 28);
+    padding: 0 0.5rem;
+}
+
+.draws {
+    background-color: rgb(255, 217, 0);
+    padding: 0 0.5rem;
+}
+
+.losses {
+    background-color: rgb(231, 104, 82);
+    padding: 0 0.5rem;
+}
+
+.teamForm {
+    font-size: 0.75rem;
+    margin-left: 1rem;
+}
+
+tr {
+    height: 1.5rem;
+}
+
+.league-pos {
+    width: 1rem;
+    text-align: center;
+}
+
+.league-icon {
+    width: 2.5rem;
+}
+
+.league-table-container,
+.fixtures-container {
+    width: 60%;
+    margin-top: 2rem;
+}
+
+table tr td,
+table thead tr th {
+    text-align: center;
+}
+
+.team-name {
+    text-align: start;
+}
+
+.date-tag {
+    width: 15%;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+.home-team-tag,
+.th-home {
+    text-align: right;
+}
+
+.away-team-tag,
+.th-away {
+    text-align: left;
+}
+
+.vs-tag {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.competition-tag,
+.th-comp {
+    text-align: center;
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+/* footer start */
+
+footer {
+    width: 100%;
+    background-color: var(--dark);
+    color: var(--light);
+    position: sticky;
+    bottom: 0;
+    left: 0;
+}
+
+footer a,
+.portfolio-link {
+    text-decoration: none;
+    color: var(--light);
+    padding: 1rem 0;
+}
+
+footer a:hover,
+.portfolio-link:hover {
+    color: var(--secondary);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.portfolio-link {
+    font-size: 1rem;
+}
+
+/* footer end */
+
+@media screen and (max-width:900px) {
+    #game-container {
+        width: 100%;
+    }
+    
+    #video-reveal-button {
+        margin-bottom: 1rem;
+    }
+
+    .fixtures-container {
+        width: 80%;
+    }
+
+    .league-table-container {
+        width: 80%;
+    }
+    
+    .gamesPlayedCol, 
+    .goalDifCol {
+        display: none;
+    }
+
+    .league-pos,
+    .league-icon,
+    .posCol,
+    .iconCol {
+        width: 0.1rem;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #game-container {
+        width: 100%;
+    }
+    
+    #video-reveal-button {
+        margin-bottom: 1rem;
+    }
+
+    .fixtures-container {
+        width: 100%;
+    }
+
+    .league-table-container {
+        width: 100%;
+    }    
+}
