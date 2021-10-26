@@ -71,10 +71,11 @@ teamSelectBtn.on('click', function (event) {
     }
 });
 
-$(document).foundation();
 
-//on page load
-//get local storage
-//if empty, do nothing
-//if populated, team name = local storage
-//document location. main index. 
+let myModalBtn = $('#favouritesBtn');
+
+$(document).ready(function() {
+    myModalBtn.click()
+});
+
+
