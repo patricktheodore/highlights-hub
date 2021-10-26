@@ -133,9 +133,9 @@ function getTeamLogo(teamID) {
         },
     })
         .then((response) => response.json())
-        .then(function (result) {
-            return result.crestUrl
-        })
+        //.then(function (result) {
+        //    return result.crestUrl
+        //})
 }
 
 function createHomeTeam(name, icon) {
@@ -153,6 +153,39 @@ function createAwayTeam(name, icon) {
     teamAway.prepend(iconImg)
     return teamAway
 }
+
+// logo url
+// team id
+
+
+async function getLogo(teamId){
+    // chekc if ls has this team already
+    const caches = JSON.parse(localStorage.getItem('caches:logo')) || [];
+
+    const found = caches.find(function(team) {
+        return team.id === teamId
+    })
+    // if not call the api, 
+    if (!found){
+        const response = await getTeamLogo(teamId)
+
+        // store the result in ls
+        const payload = {
+            logoUrl: response.crestUrl,
+            id: response.id,
+            
+        }
+        localStorage.setItem('caches:logo', JSON.stringify([
+            ...caches,
+            payload
+        ]))
+        return payload.logoUrl;
+    }
+    return found.logoUrl;
+
+
+}
+
 
 function getFixtures(teamID) {
     fetch(`https://api.football-data.org/v2/teams/${teamID}/matches?status=SCHEDULED&dateFROM=${dateToday}`, {
@@ -176,8 +209,8 @@ function getFixtures(teamID) {
                 const gameDate = moment.utc(utcDate).local().format("DD - MMM");
                 const gameDateLocal = $('<td>').text(gameDate).attr({ class: "date-tag" });
                 console.log(gameDate);
-                const homeTeamIcon = await getTeamLogo(match.homeTeam.id);
-                const awayTeamIcon = await getTeamLogo(match.awayTeam.id);
+                const homeTeamIcon = await getLogo(match.homeTeam.id);
+                const awayTeamIcon = await getLogo(match.awayTeam.id);
 
                 const homeTeam = createHomeTeam(match.homeTeam.name, homeTeamIcon).attr({ class: "home-team-tag" });
                 const awayTeam = createAwayTeam(match.awayTeam.name, awayTeamIcon).attr({ class: "away-team-tag" });
@@ -199,8 +232,11 @@ function getFixtures(teamID) {
 const backBtn = $('.back-link')
 
 backBtn.on('click', function() {
-    localStorage.clear();
-    document.location = "https://patricktheodore.github.io/football-highlights-dashboard/";
+    // we dont want to clear the cache
+    
+    localStorage.removeItem('team')
+    
+    document.location = window.location.href.replace("assets/html/main-display.html", '');
 })
 
 

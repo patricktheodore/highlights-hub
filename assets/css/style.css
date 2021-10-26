@@ -1,19 +1,13 @@
 /* input color variables */
 :root {
-    --dark: #38003d;
-    --light: #ffffff;
-    --secondary: #d9d9d9;
-    --primary: #999999;
+    --dark: black;
+    --light: #ffffffe5;
+    --primary: rgba(255, 255, 255, 0.596);
 }
 /* universal style */
 body {
     font-family: 'Ubuntu', sans-serif;
     width: 100%;
-    min-height: 100vh;
-    background-image: url(../images/background-image.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     font-size: 16px;
     color: var(--light);
     box-sizing: border-box;
